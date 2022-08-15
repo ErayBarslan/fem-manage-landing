@@ -22,9 +22,12 @@ body {
   align-items: center;
   background-color: $very-light-gray;
   font-family: $vietnam;
-  background-image: url('/images/bg-tablet-pattern.svg'), url('/images/bg-tablet-pattern.svg');
-  background-repeat: no-repeat;
-  background-position: 772px -154px, -504px 1122px;
+
+  @include tablet {
+    background-image: url('images/bg-tablet-pattern.svg'), url('images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: 772px -154px, -504px 1122px;
+  }
 }
 
 main {
