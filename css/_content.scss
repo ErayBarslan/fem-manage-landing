@@ -1,0 +1,194 @@
+.content {
+  font-family: $vietnam;
+  display: grid;
+  justify-items: center;
+  margin: 38px 0 0 0;
+  grid-template-areas: "a""b""c""d";
+}
+
+.stats {
+  width: 342px;
+}
+
+.better-products {
+  margin: 8px 25px;
+  display: grid;
+  grid-row-gap: 5px;
+  text-align: center;
+  justify-items: center;
+  max-width: 600px;
+
+  h1 {
+    @include heading(clamp(2.35rem, 2.5vw + 1rem, 3.25rem), clamp(3.1rem, 3.5vw + 1rem, 3.95rem));
+  }
+
+  p {
+    @include text(1rem);
+  }
+
+  button {
+    margin: 23px 0 0 0;
+  }
+}
+
+.about-manage {
+  margin: 87px 30px;
+  display: grid;
+  grid-row-gap: 11px;
+  text-align: center;
+  max-width: 600px;
+
+  h2 {
+    @include heading(clamp(1.8rem, 2vw + .7rem, 2.35rem), 2.9rem);
+  }
+
+  p {
+    @include text(.875rem);
+  }
+}
+
+.list {
+  display: grid;
+  padding-left: 16px;
+  margin: -36px 0 0 0;
+  grid-row-gap: 45px;
+}
+
+.list-content {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-areas: "a b""c c";
+  align-items: center;
+  background: linear-gradient(90deg, $very-light-gray 20px, transparent 20px),
+    linear-gradient(180deg, $bg-color 39px, transparent 39px);
+
+  div {
+    grid-area: a;
+    width: 67px;
+    height: 39px;
+    border: none;
+    background-color: $bright-red;
+    color: white;
+    border-radius: 50px;
+    font-family: $vietnam;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    @include heading(.92rem, auto);
+    grid-area: b;
+    margin-left: 32px;
+  }
+
+  p {
+    @include text(.875rem);
+    grid-area: c;
+    margin: 10px 20px 0 0;
+  }
+}
+
+@include tablet {
+  .list-content {
+    display: grid;
+    grid-template-columns: 67px 470px;
+    grid-column-gap: 28px;
+    grid-template-areas: "a b""a c";
+    align-items: start;
+    background: none;
+
+    div {
+      grid-area: a;
+      width: 67px;
+      height: 39px;
+      font-size: 1rem;
+    }
+
+    h3 {
+      @include heading(1rem, auto);
+      grid-area: b;
+      margin: 9px 0 0 0;
+    }
+
+    p {
+      @include text(1rem);
+      line-height: 1.65rem;
+      grid-area: c;
+      margin: 20px 30px 0 0;
+    }
+  }
+}
+
+@include desktop {
+  .content {
+    margin: 109px 0 0 23px;
+    grid-template-areas: "a b""c d";
+    justify-items: center;
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+  }
+
+  .stats {
+    width: initial;
+    grid-area: b;
+  }
+
+  .better-products {
+    grid-area: a;
+    margin: 68px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 441px;
+
+    h1 {
+      @include heading(auto, auto);
+    }
+
+    p {
+      @include text(1rem);
+      line-height: 1.65rem;
+      margin: 24px 100px 0 0;
+    }
+
+    button {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  .about-manage {
+    grid-area: c;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 441px;
+
+    h2 {
+      @include heading(auto, 2.8rem);
+    }
+
+    p {
+      @include text(1rem);
+      line-height: 1.65rem;
+      margin: 15px 80px 0 0;
+    }
+  }
+
+  .list {
+    display: grid;
+    padding-left: 24px;
+    margin: -3px 0 0 0;
+    grid-row-gap: 37px;
+  }
+}
+
+@include desktop_2 {
+  .content {
+    grid-row-gap: 105px;
+    grid-column-gap: 105px;
+  }
+}

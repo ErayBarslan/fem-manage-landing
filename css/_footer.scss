@@ -1,0 +1,298 @@
+// Section simplify
+.simplify {
+  background-color: $bright-red;
+  align-self: stretch;
+  margin-top: 41px;
+  padding: 93px 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    background-image: url('/images/bg-tablet-pattern.svg'), url('/images/bg-tablet-pattern.svg');
+    background-size: 41%;
+    background-repeat: no-repeat;
+    background-position: 1212px -446px, 152px -44px;
+  }
+
+  @include tablet {
+    margin-top: 120px;
+    justify-content: space-between;
+    text-align: initial;
+    padding: 70px 100px;
+  }
+
+  @include desktop {
+    margin-top: 179px;
+    padding: 66px 165px 65px 165px;
+  }
+
+  h2 {
+    @include heading(2.35rem, 1.35);
+    font-weight: 700;
+    color: white;
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    @include desktop {
+      max-width: 39vw;
+      line-height: 1.2;
+    }
+  }
+
+  button {
+    width: 137px;
+    height: 44px;
+    border: none;
+    background-color: white;
+    color: $bright-red;
+    border-radius: 50px;
+    font-family: $vietnam;
+    font-weight: 500;
+    font-size: .8rem;
+    margin-top: 25px;
+    cursor: pointer;
+
+    @include tablet {
+      margin: 22px -4px 0 0;
+    }
+  }
+
+  button:hover {
+    color: rgba(251, 106, 54, 0.633);
+  }
+}
+
+// Footer
+footer {
+  color: white;
+  background-color: $very-dark-blue;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 44px 155px;
+  }
+
+  .input-container {
+    margin-top: 25px;
+    position: relative;
+
+    input {
+      width: 239px;
+      height: 44px;
+      border: none;
+      background-color: white;
+      color: $bright-red;
+      border-radius: 50px;
+      font-family: $vietnam;
+      padding: 0 25px;
+      font-weight: 300;
+      font-size: .8rem;
+      margin-top: 25px;
+    }
+
+    input::placeholder {
+      color: black;
+    }
+
+    button {
+      width: 80px;
+      height: 44px;
+      border: none;
+      background-color: $bright-red;
+      color: white;
+      border-radius: 50px;
+      font-family: $vietnam;
+      font-weight: 500;
+      font-size: .8rem;
+      margin-top: 25px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(255, 157, 121);
+    }
+
+    .form-error {
+      color: rgb(224, 84, 33);
+      position: absolute;
+      font-size: .77rem;
+      left: 12px;
+      top: 77px;
+      visibility: hidden;
+    }
+
+    @include tablet {
+      order: 3;
+      margin-top: 0;
+      margin-right: 10px;
+      align-self: stretch;
+    }
+
+    @include desktop {
+      margin-top: -5px;
+
+      input {
+        width: 200px;
+        padding: 0 15px;
+      }
+
+      button {
+        width: 64px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .bottom-nav {
+    margin-top: 56px;
+    display: flex;
+
+    .left-nav {
+      margin-left: 15px;
+      margin-right: 54px;
+    }
+    .right-nav {
+      margin-left: 54px;
+    }
+
+    li {
+      margin: 0 0 15px 0;
+    }
+
+    a:hover {
+      color: rgb(255, 128, 82);
+    }
+
+    a {
+      color: $very-light-gray;
+      font-size: .875rem;
+      font-weight: 300;
+    }
+
+    @include tablet {
+      order: 2;
+      margin-top: 20px;
+
+      .left-nav {
+        margin-right: 20px;
+      }
+      .right-nav {
+        margin-left: 20px;
+      }
+    }
+
+    @include desktop_2 {
+      margin-right: 66px;
+
+      .left-nav {
+        margin-right: 112px;
+      }
+      .right-nav {
+        margin-left: 112px;
+      }
+    }
+  }
+
+  .social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      order: 1;
+      align-items: stretch;
+    }
+  }
+  .socials {
+    margin: 35px 0 0 0;
+    display: flex;
+    justify-items: center;
+
+    li {
+      margin: 0 17px;
+    }
+
+    img {
+      width: 33px;
+    }
+
+    @include tablet {
+      order: 2;
+
+      li {
+        margin: 0 10px;
+      }
+
+      img {
+        width: 25px;
+      }
+    }
+
+    @include desktop {
+      margin: 80px 0 0 10px;
+
+      li {
+        margin: 0 6px;
+      }
+
+      img {
+        width: 21px;
+      }
+    }
+  }
+
+  .footer-logo {
+    margin: 49px 3px 0 0;
+    width: 158px;
+
+    @include tablet {
+      order: 1;
+      margin: 0 0 0 10px;
+    }
+
+    @include desktop {
+      width: 146px;
+      margin: 7px 0 0 16px;
+    }
+  }
+
+  small {
+    margin: 50px 0 29px 0;
+    font-size: .75rem;
+    color: $dark-grayish-blue;
+
+    @include tablet {
+      position: absolute;
+      bottom: 30px;
+      right: 165px;
+      margin: 0;
+    }
+
+    @include desktop {
+      bottom: 61px;
+    }
+  }
+}

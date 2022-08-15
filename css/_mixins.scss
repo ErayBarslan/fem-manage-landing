@@ -1,0 +1,12 @@
+@mixin heading($size, $line) {
+  font-size: $size;
+  color: $dark-blue;
+  line-height: $line;
+}
+
+@mixin text($size) {
+  font-size: $size;
+  color: $dark-grayish-blue;
+  line-height: 1.75rem;
+  font-weight: 300;
+}
