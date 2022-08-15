@@ -407,7 +407,7 @@ main {
   position: absolute;
   margin-top: -36px;
 }
-.slide figcaption {
+.slide p {
   margin: 63px 0 0 0;
   font-weight: 500;
   font-size: 0.95rem;
@@ -449,7 +449,7 @@ main {
     width: 37.5vw;
     margin: 76px 1.05vw 0 1.05vw;
   }
-  .slide figcaption {
+  .slide p {
     font-size: 1rem;
   }
   .slide blockquote {
