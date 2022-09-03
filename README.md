@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/eraybarslan/frontend-manage-landing/](https://github.com/eraybarslan/frontend-manage-landing/)
-- Live Site URL: [https://eraybarslan.github.io/frontend-manage-landing/](https://eraybarslan.github.io/frontend-manage-landing/)
+- Solution URL: [https://github.com/eraybarslan/fem-manage-landing/](https://github.com/eraybarslan/fem-manage-landing/)
+- Live Site URL: [https://eraybarslan.github.io/fem-manage-landing/](https://eraybarslan.github.io/fem-manage-landing/)
 
 ### Screenshots
 
